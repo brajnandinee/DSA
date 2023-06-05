@@ -1,0 +1,41 @@
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Scanner;
+
+/*count distinct elements using Hashing
+T = O(N)
+S = O(N)
+*/
+public class hashing2
+{
+    public static void main(String[] args)
+    {
+        System.out.println("How many integers do you want to enter?");
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int []a = new int [n];
+        System.out.println("Enter " + n + " integers of your choice");
+        for(int i = 0; i < n; i++)
+        {
+            a[i] = s.nextInt();
+        }
+        System.out.print("The entered array of integers is as follows:");
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print("      " + a[i]);
+        }
+        System.out.println();
+        System.out.println("Thus, the no. of distinct elements in the array = " + Count(a));
+        s.close();
+    }
+    static int Count(int a[])
+    {
+        Set<Integer> s = new HashSet<>();
+        for(int element : a)
+        {
+            s.add(element);
+        }
+        System.out.println("The distinct elements in the array are " + s);
+        return s.size();
+    }
+}
