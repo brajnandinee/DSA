@@ -2,7 +2,9 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Scanner;
 
-//intersection of two unsorted arrays using Hashing
+/*intersection of two unsorted arrays using Hashing
+T = O(NlogN + MlogM)
+S = o(N)*/
 public class hashing5
 {
     public static void main(String[] args)
@@ -56,7 +58,15 @@ public class hashing5
                 s.remove(element);
             }
         }
-        System.out.println();
+        if(count == 0)
+        {
+            System.out.println("       Φ");
+            System.out.println("That is, the intersection is an empty set");
+        }
+        else
+        {
+            System.out.println();
+        }
         return count;
     }
 }
