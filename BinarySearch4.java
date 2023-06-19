@@ -61,9 +61,9 @@ public class BinarySearch4
                 System.out.println("The element " + x + " is at the " + (MiddleIndex + 1) + "th position");
                 MaxCount++;
             }
-            if(a[LeftIndex] < a[MiddleIndex])
+            if(a[LeftIndex] <= a[MiddleIndex])
             {
-                if(x >= a[LeftIndex] && x < a[MiddleIndex])
+                if(x >= a[LeftIndex] && x <= a[MiddleIndex])
                 {
                     RightIndex = MiddleIndex - 1;
                 }
@@ -73,7 +73,7 @@ public class BinarySearch4
             }
             else
             {
-                if(x <= a[RightIndex] && x > a[MiddleIndex])
+                if(x <= a[RightIndex] && x >= a[MiddleIndex])
                 {
                     LeftIndex = MiddleIndex + 1;
                 }
